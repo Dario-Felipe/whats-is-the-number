@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/style.css">
 
   <title>What is the number</title>
@@ -16,10 +16,23 @@
       <section class="title-content">
         <h1>Qual é o número?</h1>
       </section>
-    </div>
 
+      <section class="display-content"></section>
+
+      <section class="search-content">
+        <form>
+          <input
+            type="text"
+            name="search"
+            class="search-input"
+            placeholder="Digite o palpite"
+          />
+          <button type="submit" id="send-button">Enviar</button>
+        </form>
+      </section>
+    </div>
   </main>
   
-  <script src="./src/script.js"></script>
+  <script type="module" src="./src/script.js"></script>
 </body>
 </html>
