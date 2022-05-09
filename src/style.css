@@ -7,6 +7,8 @@
   --border-color: #CFCFCF;
   --segment-filled: #262A34;
   --segment-empty: #DDDDDD;
+  --success: #32BF00;
+  --error: #CC3300;
 }
 
 *{
@@ -63,6 +65,14 @@ main {
   background: var(--border-color);
 }
 
+.results-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .display-content {
   width: 100%;
   display: flex;
@@ -104,16 +114,41 @@ main {
   transform: skewY(45deg);
 }
 
-.segment.filled::before {
+.filled {
   background-color: var(--segment-filled);
+}
+
+.segment.filled::before {
+  background: var(--segment-filled);
 }
 
 .segment.filled::after {
-  background-color: var(--segment-filled);
+  background: var(--segment-filled);
 }
 
-.filled {
-  background-color: var(--segment-filled);
+.display-title {
+  font-size: 16px;
+  color: var(--primary);
+}
+
+.results-content.success .display-title {
+  color: var(--success);
+}
+
+.results-content.error .display-title {
+  color: var(--error);
+}
+
+.results-content.success .segment.filled,
+.results-content.success .segment.filled::before, 
+.results-content.success .segment.filled::after  {
+  background: var(--success);
+}
+
+.results-content.error .segment.filled,
+.results-content.error .segment.filled::before,
+.results-content.error .segment.filled::after  {
+  background: var(--error);
 }
 
 .A {
@@ -172,6 +207,18 @@ main {
   transform: rotate(-90deg);
 }
 
+.play-again-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+}
+
+.play-again-button.hidden {
+  display: none;
+}
+
 .search-content {
   width: 100%;
 }
@@ -206,6 +253,11 @@ main {
 #send-button:hover {
   cursor: pointer;
   background: var(--segment-filled);
+}
+
+#send-button:disabled {
+  background: var(--segment-empty);
+  color: var(--white);
 }
 
 /* - Tablet or up screens - */
