@@ -1,9 +1,9 @@
-import displayFunctions from "./index.js";
 import constants from "../../constants.js";
 
-export default function generateDisplay(number = 0) {
-  const { clearDisplays, fillSegments } = displayFunctions;
+import clearDisplays from './clear.js';
+import fillSegments from "./fillSegments.js";
 
+export default function generateDisplay(number = 0) {
   const displaysNumbers = Array.from(number.toString());
   const segments = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
