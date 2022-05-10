@@ -10,20 +10,20 @@ const playAgainButton = document.querySelector(`.${constants.classes.PLAY_AGAIN_
 async function initialize()  {
   const resultsContent = document.querySelector(`.${constants.classes.RESULTS_CONTENT}`);
 
+  displayFunctions.generateDisplay();
+
   document.querySelector(`.${constants.classes.DISPLAY_TITLE}`)?.remove();
   resultsContent.classList.remove( constants.classes.SUCCESS, constants.classes.ERROR);
   playAgainButton.classList.add(constants.classes.HIDDEN);
-  
+
   let searchInput = document.querySelector(`.${constants.classes.SEARCH_INPUT}`);
 
   sendButton.disabled = false;
   searchInput.disabled = false;
 
   rightNumber = await getRightNumber();
-  
-  if(rightNumber.value) {
-    displayFunctions.generateDisplay();
-  } else {
+
+  if(!rightNumber.value) {
     displayFunctions.generateDisplay(rightNumber.StatusCode);
     resultsContent.classList.add(constants.classes.ERROR);
     playAgainButton.classList.toggle(constants.classes.HIDDEN);
@@ -37,5 +37,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initialize();
 });
 
-sendButton.addEventListener("click", (event) => getGuess(event, rightNumber.value));
 playAgainButton.addEventListener("click", () => initialize());
+sendButton.addEventListener("click", (event) => getGuess(event, rightNumber.value));

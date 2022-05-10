@@ -8,6 +8,8 @@ export default function getGuess(event, rightNumber) {
   let sendButton = document.querySelector(`#${constants.classes.SEND_BUTTON}`);
   let searchInput = document.querySelector(`.${constants.classes.SEARCH_INPUT}`);
 
+  searchInput.value = Number(searchInput.value);
+
   if (!searchInput.value.match(numberMask)) {
     alert("Apenas números são permitidos");
 
@@ -45,7 +47,7 @@ let message;
   searchInput.disabled = true;
   sendButton.disabled = true;
  }
-  
+
   displayTitle.textContent = message
   resultContent.prepend(displayTitle);
 

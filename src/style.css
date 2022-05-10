@@ -3,6 +3,8 @@
   --main-background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 100%);
   --primary: #EF6C00;
   --primary-gradiant: linear-gradient(174.92deg, #EF6C00 18.47%, #DB6300 36.57%);
+  --primary-gradiant: linear-gradient(174.92deg, #EF6C00 18.47%, #DB6300 36.57%);
+  --play-button: linear-gradient(180deg, rgba(67,72,84,1) 0%, rgba(158,158,158,1) 100%);
   --white: #FFFFFF;
   --border-color: #CFCFCF;
   --segment-filled: #262A34;
@@ -140,7 +142,7 @@ main {
 }
 
 .results-content.success .segment.filled,
-.results-content.success .segment.filled::before, 
+.results-content.success .segment.filled::before,
 .results-content.success .segment.filled::after  {
   background: var(--success);
 }
@@ -212,7 +214,23 @@ main {
   justify-content: center;
   align-items: center;
   gap: 6px;
-  padding: 8px;
+  padding: 16px;
+  background: var(--play-button);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-duration: 0.6s;
+}
+
+.play-again-button:hover {
+  background: var(--primary-gradiant);
+}
+
+.play-again-button span {
+  color: var(--white);
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .play-again-button.hidden {
@@ -235,6 +253,7 @@ main {
   padding: 14px 8px;
   width: 210px;
   border: 1px solid var(--border-color);
+  background: var(--white);
   border-radius: 4px;
   outline-color: var(--primary);
 }
@@ -245,7 +264,7 @@ main {
   padding: 14px;
   border-radius: 4px;
   color: var(--white);
-  transition-duration: 0.4s;
+  transition-duration: 0.6s;
   text-transform: uppercase;
   font-size: 12px;
 }
