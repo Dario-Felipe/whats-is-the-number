@@ -1,4 +1,4 @@
-import constants from "../../constants.js";
+import constants from "../../constants/index.js";
 
 import clearDisplays from './clear.js';
 import fillSegments from "./fillSegments.js";

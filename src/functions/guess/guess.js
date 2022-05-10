@@ -1,4 +1,4 @@
-import constants from "../../constants.js";
+import constants from "../../constants/index.js";
 import displayFunctions from "../display/index.js";
 
 import validateGuess from "./validate.js";

@@ -1,4 +1,4 @@
-import constants from "../constants.js";
+import constants from "../constants/index.js";
 
 async function getRightNumber() {
  let url = new URL(`${constants.api.URL}/rand`);
