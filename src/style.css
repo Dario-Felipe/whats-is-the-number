@@ -3,7 +3,6 @@
   --main-background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 100%);
   --primary: #EF6C00;
   --primary-gradiant: linear-gradient(174.92deg, #EF6C00 18.47%, #DB6300 36.57%);
-  --primary-gradiant: linear-gradient(174.92deg, #EF6C00 18.47%, #DB6300 36.57%);
   --play-button: linear-gradient(180deg, rgba(67,72,84,1) 0%, rgba(158,158,158,1) 100%);
   --white: #FFFFFF;
   --border-color: #CFCFCF;
@@ -13,7 +12,7 @@
   --error: #CC3300;
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
 }
@@ -48,6 +47,7 @@ main {
 .title-content h1 {
   background: var(--primary-gradiant);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
   display: flex;
