@@ -1,3 +1,4 @@
+import 'regenerator-runtime/runtime'
 import constants from './constants/index.js';
 
 import getRightNumber from './services/api.js';
@@ -16,7 +17,7 @@ async function initialize()  {
   displayFunctions.generateDisplay();
 
   document.querySelector(`.${constants.classes.DISPLAY_TITLE}`)?.remove();
-  resultsContent.classList.remove( constants.classes.SUCCESS, constants.classes.ERROR);
+  resultsContent.classList.remove(constants.classes.SUCCESS, constants.classes.ERROR);
   playAgainButton.classList.add(constants.classes.HIDDEN);
 
   sendButton.disabled = false;
@@ -27,6 +28,8 @@ async function initialize()  {
   if(!rightNumber.value) {
     guessFunctions.validateGuess("ERRO", constants.guessStatus.ERROR);
     displayFunctions.generateDisplay(rightNumber.StatusCode);
+  } else {
+    searchInput.focus();
   }
 }
 
