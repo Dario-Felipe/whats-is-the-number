@@ -6,6 +6,7 @@ export default function validateGuess(message, status = '') {
   const sendButton = document.querySelector(`#${constants.classes.SEND_BUTTON}`);
   const searchInput = document.querySelector(`.${constants.classes.SEARCH_INPUT}`);
   const resultsContent = document.querySelector(`.${constants.classes.RESULTS_CONTENT}`);
+  const playAgainButton =  document.querySelector(`.${constants.classes.PLAY_AGAIN_BUTTON}`);
 
   const displayTitle = document.createElement('h5');
   displayTitle.classList.add(constants.classes.DISPLAY_TITLE);
@@ -13,7 +14,8 @@ export default function validateGuess(message, status = '') {
   if(status.length) {
     resultsContent.classList.add(status);
 
-    document.querySelector(`.${constants.classes.PLAY_AGAIN_BUTTON}`).classList.toggle(constants.classes.HIDDEN);
+    playAgainButton.classList.toggle(constants.classes.HIDDEN);
+    playAgainButton.focus();
 
     searchInput.disabled = true;
     sendButton.disabled = true;
