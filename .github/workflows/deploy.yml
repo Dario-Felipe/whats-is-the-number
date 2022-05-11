@@ -30,7 +30,7 @@ jobs:
         run: npm run build
       
       - name: Deploy
-        uses: Dario-Felipe/whats-is-the-number@v1
+        uses: Dario-Felipe/whats-is-the-number@v4
         with:
           folder: build
           branch: gh-pages
