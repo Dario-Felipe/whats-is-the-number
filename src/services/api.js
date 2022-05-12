@@ -21,3 +21,7 @@ async function getRightNumber() {
 }
 
 export default getRightNumber;
+
+/*
+  Here is the getRightNumber() function responsible for requesting the PAI and getting the correct guess number or error code.
+*/
