@@ -39,3 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 playAgainButton.addEventListener("click", () => initialize());
 sendButton.addEventListener("click", (event) => guessFunctions.getGuess(event, rightNumber.value));
+
+/*
+  The logic of the initialize() function is to make a new request to the API and remove the remnants of a previous game. It is executed whenever the play button is clicked again or if the DOM is mounted.
+
+  2 event listeners were placed for the guess and replay buttons.
+*/
